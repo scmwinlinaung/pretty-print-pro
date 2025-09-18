@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Header } from "@/components/Header";
 import { EditorPanel } from "@/components/EditorPanel";
+import { OutputViewer } from "@/components/OutputViewer";
 import { ActionBar } from "@/components/ActionBar";
 import { formatters, validateCode } from "@/utils/formatters";
 import { useToast } from "@/hooks/use-toast";
@@ -166,11 +167,9 @@ const Index = () => {
             language={activeFormatter}
           />
           
-          <EditorPanel
+          <OutputViewer
             title="Formatted Output"
             value={outputCode}
-            isOutput
-            placeholder="Formatted code will appear here..."
             language={activeFormatter}
           />
         </section>
