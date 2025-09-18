@@ -82,7 +82,7 @@ export function EditorPanel({
   };
 
   return (
-    <div className="editor-panel h-full flex flex-col animate-fade-in">
+    <div className="editor-panel h-full min-h-[600px] flex flex-col animate-fade-in">
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b bg-muted/30">
         <div className="flex items-center space-x-3">
@@ -175,12 +175,12 @@ export function EditorPanel({
           placeholder={placeholder}
           readOnly={isOutput}
           className={`
-            editor-textarea border-0 rounded-none resize-none
+            editor-textarea border-0 rounded-none resize-none text-sm leading-6
             ${language === 'json' ? 'syntax-json' : ''}
             ${isOutput ? 'bg-muted/20' : 'bg-transparent'}
-            focus:ring-0 focus:border-0
+            focus:ring-0 focus:border-0 min-h-[500px]
           `}
-          style={{ minHeight: '100%' }}
+          style={{ minHeight: '500px', height: '500px' }}
         />
         
         {error && (

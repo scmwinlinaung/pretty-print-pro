@@ -135,7 +135,7 @@ const Index = () => {
         onFormatterChange={setActiveFormatter} 
       />
 
-      <main className="container mx-auto px-6 py-8">
+      <main className="container mx-auto px-4 py-8 max-w-full">
         {/* Hero Section */}
         <section className="text-center mb-12 animate-fade-in">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
@@ -154,7 +154,7 @@ const Index = () => {
         </section>
 
         {/* Editor Interface */}
-        <section className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+        <section className="grid grid-cols-1 xl:grid-cols-2 gap-8 mb-8 min-h-[700px]">
           <EditorPanel
             title="Input Code"
             value={inputCode}
